@@ -1,0 +1,48 @@
+@font-face {
+  font-family: Vazir;
+  src: url(./font/Vazir.eot), url(./font/Vazir.ttf), url(./font/Vazir.woff),
+    url(./font/Vazir.woff2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Vazir;
+  direction: rtl;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e3e0;
+}
+.box {
+  width: 80vw;
+  height: auto;
+  border-style: dotted;
+  border-color: black;
+  display: grid;
+  grid-template-columns: 40vw 40vw;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header ."
+    "main image"
+    "price price";
+}
+.text {
+  grid-area: header;
+  font-weight: bolder;
+  justify-self: center;
+}
+.explain {
+  grid-area: main;
+}
+img {
+  grid-area: image;
+  width: 80%;
+  justify-self: center;
+}
+.price {
+  grid-area: price;
+}
