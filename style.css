@@ -11,13 +11,13 @@
   direction: rtl;
 }
 body {
-  height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #e0e3e0;
 }
-.box {
+.product {
   width: 80vw;
   height: auto;
   border-style: dotted;
@@ -30,12 +30,12 @@ body {
     "main image"
     "price price";
 }
-.text {
+.name {
   grid-area: header;
   font-weight: bolder;
   justify-self: center;
 }
-.explain {
+.description {
   grid-area: main;
 }
 img {
