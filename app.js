@@ -3,8 +3,8 @@ const apiImg = "https://hectorabzar.com/wp-json/wp/v2/media";
 
 async function fetchData() {
   try {
-    const response = await fetch(apiKey);
-    const data = await response.json();
+    const responseData = await fetch(apiKey);
+    const data = await responseData.json();
     console.log(data);
 
     const container = document.getElementById("container");
@@ -26,7 +26,7 @@ async function fetchData() {
       const imageElement = document.createElement("img");
       imageElement.classList.add("image");
       productElement.appendChild(imageElement);
-      imageElement.src = product._links["wp:featuredmedia"]; // جایگزین کنید با متغیر مربوط به عکس کالا در داده های API
+      imageElement.src = product._links.featuredmedia; // جایگزین کنید با متغیر مربوط به عکس کالا در داده های API
 
       const priceElement = document.createElement("p");
       priceElement.classList.add("price");
